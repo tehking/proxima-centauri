@@ -1,18 +1,16 @@
-var GameState = {
-  preload: function(){
-
+var config = {
+  type:Phaser.AUTO,
+  width:1152,
+  height:648,
+  physics: {
+    default:'arcade',
+    arcade: {
+      gravity: {y: 200}
+    }
   },
-  create: function(){
-
-  },
-  update: function(){
-
-  },
-
+  scene:[ Battle ]
 };
 
-//initiate Phaser framework
-var game = new Phaser.Game(640, 360, Phaser.AUTO);
 
-game.state.add('GameState', GameState);
-game.state.start('GameState');
+//initiate Phaser framework
+var game = new Phaser.Game(config);
